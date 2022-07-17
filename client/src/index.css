@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, *::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body{
+    background: rgb(221, 221, 221);
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+ 
+}
+                        /***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #E4E4E4;
+  height: 0.5rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: #E4E4E4;
+  height: 0.5rem;
+}
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: #61CEFB;
+  height: 1rem;
+  width: 1rem;    
+}
+
+/***** Thumb Styles *****/
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: #61CEFB;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+outline:none
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 2px solid #61CEFB;
+ 
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: 2px solid #0898ff;
+      
+}
+
+
+.before-box::before{
+content:"";
+background: #1C1943 ;
+height:100%;
+width:100%;
+z-index:-99;
+position: absolute;
+}
+.form-group{
+  margin-bottom: 5px;
+}
+.form-group label{
+  font-size:18px;
+  font-weight:600;
+ display: block;
+ margin-bottom: 6px;
+}
+.form-group input{
+  font-size:14px;
+  padding: 4px 20px;
+color:#333;
+ display: block;
+ margin-bottom: 3px;
+ width:100%;
+ border-radius:10px;
+}
+.form-group textarea{
+  border-radius: 10px;
+  padding: 4px 20px;
+  color:#333;
+     display: block;
+     margin-bottom: 10px;
+     width:100%;
+     border-radius:10px;
+}
+.form-group small{
+  font-weight: 600;
+  color:rgb(255, 255, 255);
+}
+.form-main.form-group small{
+  font-weight: 600;
+  color:#B6B6B6;
+  padding-left: 10px;
+}
+
+.form-main.form-group input:focus{
+  border: none;
+  outline: none;
+}
+.filehide{
+  display:none;
+}
+.table{
+  display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+.borderradiusformtop{
+  border-radius: 10px 10px 0 0;
+}
+.sidebar ul li:hover span{
+    margin-left: 5px;
+}
