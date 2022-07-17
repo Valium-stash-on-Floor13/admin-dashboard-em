@@ -22,7 +22,7 @@ const bcrypt = require('bcryptjs')
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://test:Qd7lc4xhRhQTa9CW@cluster0.jo8w72a.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect(DATABASE_URI,
 {useNewUrlParser: true, useUnifiedTopology:true,})
 
 app.put('/api/cost', async (req, res) => {
@@ -55,7 +55,7 @@ app.put('/api/cost', async (req, res) => {
 	}
 })
 
-const API_KEY="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";
+const API_KEY=API_KEY;
 sgMail.setApiKey(API_KEY)
 
  function sendMail(email,tokenId, id){
